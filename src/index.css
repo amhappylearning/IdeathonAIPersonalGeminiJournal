@@ -1,0 +1,567 @@
+@import "tailwindcss";
+
+:root, [data-theme="deep-stone"] {
+  --app-bg: #1c1917; /* stone-900 */
+  --app-bg-deep: #0c0a09; /* stone-950 */
+  --app-bg-subtle: #171412; /* stone-925 */
+  --app-bg-surface: #292524; /* stone-800 */
+  --app-bg-card: #1f1c1a;
+  --app-border: #292524; /* stone-800 */
+  --app-border-light: #44403c; /* stone-700 */
+  --app-text-main: #f5f5f4; /* stone-100 */
+  --app-text-secondary: #d6d3d1; /* stone-300 */
+  --app-text-muted: #a8a29e; /* stone-400 */
+  --app-text-faint: #78716c; /* stone-500 */
+  --app-accent: #f59e0b; /* amber-500 */
+  --app-accent-hover: #d97706; /* amber-600 */
+  --app-accent-bg: rgba(245, 158, 11, 0.1);
+  --app-accent-border: rgba(245, 158, 11, 0.25);
+  --app-input-bg: #0c0a09;
+  --app-user-msg-bg: #292524;
+  --app-gemini-msg-bg: rgba(245, 158, 11, 0.05);
+  --app-scrollbar-thumb: rgba(87, 83, 78, 0.6);
+  --app-scrollbar-track: rgba(28, 25, 23, 0.5);
+}
+
+[data-theme="light-paper"] {
+  --app-bg: #faf7f2; /* warm editorial parchment */
+  --app-bg-deep: #f2ebe1; /* soft paper depth */
+  --app-bg-subtle: #f6f0e6;
+  --app-bg-surface: #ffffff; /* pure card white */
+  --app-bg-card: #ffffff;
+  --app-border: #e6dfd3; /* subtle warm border */
+  --app-border-light: #d8cfc0; /* defined warm border */
+  --app-text-main: #1c1917; /* high contrast ink */
+  --app-text-secondary: #292524;
+  --app-text-muted: #57534e;
+  --app-text-faint: #8c857b;
+  --app-accent: #d97706; /* warm amber 600 */
+  --app-accent-hover: #b45309; /* amber 700 */
+  --app-accent-bg: rgba(217, 119, 6, 0.12);
+  --app-accent-border: rgba(217, 119, 6, 0.3);
+  --app-input-bg: #ffffff;
+  --app-user-msg-bg: #ebe5da;
+  --app-gemini-msg-bg: #ffffff;
+  --app-scrollbar-thumb: rgba(180, 170, 156, 0.7);
+  --app-scrollbar-track: rgba(242, 235, 225, 0.6);
+}
+
+/* Eye-soothing Soft Blush / Light Pink Theme */
+[data-theme="soft-blush"] {
+  --app-bg: #fdf5f6; /* soft rose mist */
+  --app-bg-deep: #f7e6e9; /* gentle blush depth */
+  --app-bg-subtle: #fbf0f2;
+  --app-bg-surface: #ffffff;
+  --app-bg-card: #ffffff;
+  --app-border: #ebd3d7;
+  --app-border-light: #dec0c5;
+  --app-text-main: #2d181c; /* warm deep plum espresso */
+  --app-text-secondary: #4a2d33;
+  --app-text-muted: #79555c;
+  --app-text-faint: #a8858d;
+  --app-accent: #d94668; /* elegant rose pink */
+  --app-accent-hover: #be2d50;
+  --app-accent-bg: rgba(217, 70, 104, 0.1);
+  --app-accent-border: rgba(217, 70, 104, 0.28);
+  --app-input-bg: #ffffff;
+  --app-user-msg-bg: #f5e4e8;
+  --app-gemini-msg-bg: #ffffff;
+  --app-scrollbar-thumb: rgba(217, 180, 188, 0.75);
+  --app-scrollbar-track: rgba(247, 230, 233, 0.6);
+}
+
+/* Eye-soothing Calm Teal Theme */
+[data-theme="calm-teal"] {
+  --app-bg: #f0f7f7; /* tranquil sea mist */
+  --app-bg-deep: #e0efef;
+  --app-bg-subtle: #eaf4f4;
+  --app-bg-surface: #ffffff;
+  --app-bg-card: #ffffff;
+  --app-border: #c9e2e2;
+  --app-border-light: #b4d5d5;
+  --app-text-main: #132a2a; /* deep oceanic slate */
+  --app-text-secondary: #1f3f3f;
+  --app-text-muted: #3d6868;
+  --app-text-faint: #6e9494;
+  --app-accent: #0f766e; /* deep balanced teal */
+  --app-accent-hover: #115e59;
+  --app-accent-bg: rgba(15, 118, 110, 0.1);
+  --app-accent-border: rgba(15, 118, 110, 0.25);
+  --app-input-bg: #ffffff;
+  --app-user-msg-bg: #e1f0f0;
+  --app-gemini-msg-bg: #ffffff;
+  --app-scrollbar-thumb: rgba(160, 198, 198, 0.75);
+  --app-scrollbar-track: rgba(224, 239, 239, 0.6);
+}
+
+/* Eye-soothing Misty Sky / Light Blue Theme */
+[data-theme="misty-sky"] {
+  --app-bg: #f1f6fa; /* airy morning sky */
+  --app-bg-deep: #e2ecf5;
+  --app-bg-subtle: #ebf2f8;
+  --app-bg-surface: #ffffff;
+  --app-bg-card: #ffffff;
+  --app-border: #ccdded;
+  --app-border-light: #b6cde2;
+  --app-text-main: #172635; /* deep dusk navy */
+  --app-text-secondary: #273d52;
+  --app-text-muted: #486581;
+  --app-text-faint: #7892a9;
+  --app-accent: #2563eb; /* refined sky sapphire */
+  --app-accent-hover: #1d4ed8;
+  --app-accent-bg: rgba(37, 99, 235, 0.1);
+  --app-accent-border: rgba(37, 99, 235, 0.25);
+  --app-input-bg: #ffffff;
+  --app-user-msg-bg: #e3edf7;
+  --app-gemini-msg-bg: #ffffff;
+  --app-scrollbar-thumb: rgba(175, 198, 222, 0.75);
+  --app-scrollbar-track: rgba(226, 236, 245, 0.6);
+}
+
+/* Eye-soothing Sage Meadow / Soft Green Theme */
+[data-theme="sage-meadow"] {
+  --app-bg: #f2f6f3; /* calming herbal sage */
+  --app-bg-deep: #e2ede4;
+  --app-bg-subtle: #ebf3ec;
+  --app-bg-surface: #ffffff;
+  --app-bg-card: #ffffff;
+  --app-border: #cee1d2;
+  --app-border-light: #b8d2be;
+  --app-text-main: #182b1d; /* botanical forest pine */
+  --app-text-secondary: #243e2b;
+  --app-text-muted: #43664c;
+  --app-text-faint: #72947a;
+  --app-accent: #15803d; /* rich meadow green */
+  --app-accent-hover: #166534;
+  --app-accent-bg: rgba(21, 128, 61, 0.1);
+  --app-accent-border: rgba(21, 128, 61, 0.25);
+  --app-input-bg: #ffffff;
+  --app-user-msg-bg: #e2ede5;
+  --app-gemini-msg-bg: #ffffff;
+  --app-scrollbar-thumb: rgba(176, 202, 181, 0.75);
+  --app-scrollbar-track: rgba(226, 237, 228, 0.6);
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--app-bg);
+    color: var(--app-text-main);
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom subtle scrollbars driven by CSS variables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--app-scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-accent);
+}
+
+/* Light Paper Theme Specific Overrides */
+[data-theme="light-paper"] {
+  background-color: #faf7f2;
+  color: #1c1917;
+}
+
+[data-theme="light-paper"] .bg-stone-900 {
+  background-color: #faf7f2 !important;
+}
+
+[data-theme="light-paper"] .bg-stone-950 {
+  background-color: #f2ebe1 !important;
+}
+
+[data-theme="light-paper"] .bg-stone-925\/80,
+[data-theme="light-paper"] .bg-stone-925\/40,
+[data-theme="light-paper"] .bg-stone-925 {
+  background-color: #f6f0e6 !important;
+}
+
+[data-theme="light-paper"] .bg-stone-850,
+[data-theme="light-paper"] .bg-stone-850\/60 {
+  background-color: #ebe4d8 !important;
+}
+
+[data-theme="light-paper"] .bg-stone-800,
+[data-theme="light-paper"] .bg-stone-800\/80,
+[data-theme="light-paper"] .bg-stone-800\/90,
+[data-theme="light-paper"] .bg-stone-800\/50,
+[data-theme="light-paper"] .bg-stone-800\/40,
+[data-theme="light-paper"] .bg-stone-800\/30 {
+  background-color: #ffffff !important;
+}
+
+[data-theme="light-paper"] .bg-stone-900\/90 {
+  background-color: rgba(250, 247, 242, 0.95) !important;
+}
+
+[data-theme="light-paper"] .border-stone-800,
+[data-theme="light-paper"] .border-stone-800\/80,
+[data-theme="light-paper"] .border-stone-800\/60 {
+  border-color: #e6dfd3 !important;
+}
+
+[data-theme="light-paper"] .border-stone-700,
+[data-theme="light-paper"] .border-stone-700\/80,
+[data-theme="light-paper"] .border-stone-700\/60 {
+  border-color: #d8cfc0 !important;
+}
+
+[data-theme="light-paper"] .text-stone-100,
+[data-theme="light-paper"] .text-stone-200 {
+  color: #1c1917 !important;
+}
+
+[data-theme="light-paper"] .text-stone-300 {
+  color: #292524 !important;
+}
+
+[data-theme="light-paper"] .text-stone-400 {
+  color: #57534e !important;
+}
+
+[data-theme="light-paper"] .text-stone-500 {
+  color: #78716c !important;
+}
+
+[data-theme="light-paper"] textarea,
+[data-theme="light-paper"] input:not([type="checkbox"]) {
+  background-color: #ffffff !important;
+  color: #1c1917 !important;
+  border-color: #d8cfc0 !important;
+}
+
+[data-theme="light-paper"] textarea::placeholder,
+[data-theme="light-paper"] input::placeholder {
+  color: #a8a29e !important;
+}
+
+[data-theme="light-paper"] .markdown-body strong {
+  color: #1c1917 !important;
+}
+
+[data-theme="light-paper"] .markdown-body h1,
+[data-theme="light-paper"] .markdown-body h2,
+[data-theme="light-paper"] .markdown-body h3 {
+  color: #92400e !important;
+}
+
+[data-theme="light-paper"] .markdown-body code {
+  background-color: #f2ebe1 !important;
+  color: #b45309 !important;
+  border: 1px solid #e6dfd3;
+}
+
+[data-theme="light-paper"] .markdown-body blockquote {
+  border-left-color: #d97706 !important;
+  color: #57534e !important;
+  background-color: #f9f5ee;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* =========================================================
+   Soft Blush (Light Pink) Theme Overrides
+   ========================================================= */
+[data-theme="soft-blush"] {
+  background-color: #fdf5f6;
+  color: #2d181c;
+}
+[data-theme="soft-blush"] .bg-stone-900 { background-color: #fdf5f6 !important; }
+[data-theme="soft-blush"] .bg-stone-950 { background-color: #f7e6e9 !important; }
+[data-theme="soft-blush"] .bg-stone-925\/80,
+[data-theme="soft-blush"] .bg-stone-925\/40,
+[data-theme="soft-blush"] .bg-stone-925 { background-color: #fbf0f2 !important; }
+[data-theme="soft-blush"] .bg-stone-850,
+[data-theme="soft-blush"] .bg-stone-850\/60 { background-color: #f5e4e8 !important; }
+[data-theme="soft-blush"] .bg-stone-800,
+[data-theme="soft-blush"] .bg-stone-800\/80,
+[data-theme="soft-blush"] .bg-stone-800\/90,
+[data-theme="soft-blush"] .bg-stone-800\/50,
+[data-theme="soft-blush"] .bg-stone-800\/40,
+[data-theme="soft-blush"] .bg-stone-800\/30 { background-color: #ffffff !important; }
+[data-theme="soft-blush"] .bg-stone-900\/90 { background-color: rgba(253, 245, 246, 0.96) !important; }
+[data-theme="soft-blush"] .border-stone-800,
+[data-theme="soft-blush"] .border-stone-800\/80,
+[data-theme="soft-blush"] .border-stone-800\/60 { border-color: #ebd3d7 !important; }
+[data-theme="soft-blush"] .border-stone-700,
+[data-theme="soft-blush"] .border-stone-700\/80,
+[data-theme="soft-blush"] .border-stone-700\/60 { border-color: #dec0c5 !important; }
+[data-theme="soft-blush"] .text-stone-100,
+[data-theme="soft-blush"] .text-stone-200 { color: #2d181c !important; }
+[data-theme="soft-blush"] .text-stone-300 { color: #4a2d33 !important; }
+[data-theme="soft-blush"] .text-stone-400 { color: #79555c !important; }
+[data-theme="soft-blush"] .text-stone-500 { color: #a8858d !important; }
+[data-theme="soft-blush"] textarea,
+[data-theme="soft-blush"] input:not([type="checkbox"]) {
+  background-color: #ffffff !important;
+  color: #2d181c !important;
+  border-color: #dec0c5 !important;
+}
+[data-theme="soft-blush"] textarea::placeholder,
+[data-theme="soft-blush"] input::placeholder { color: #bca0a7 !important; }
+[data-theme="soft-blush"] .markdown-body strong { color: #2d181c !important; }
+[data-theme="soft-blush"] .markdown-body h1,
+[data-theme="soft-blush"] .markdown-body h2,
+[data-theme="soft-blush"] .markdown-body h3 { color: #9f1239 !important; }
+[data-theme="soft-blush"] .markdown-body code {
+  background-color: #f7e6e9 !important;
+  color: #be123c !important;
+  border: 1px solid #ebd3d7;
+}
+[data-theme="soft-blush"] .markdown-body blockquote {
+  border-left-color: #d94668 !important;
+  color: #79555c !important;
+  background-color: #fdf2f4;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* =========================================================
+   Calm Teal Theme Overrides
+   ========================================================= */
+[data-theme="calm-teal"] {
+  background-color: #f0f7f7;
+  color: #132a2a;
+}
+[data-theme="calm-teal"] .bg-stone-900 { background-color: #f0f7f7 !important; }
+[data-theme="calm-teal"] .bg-stone-950 { background-color: #e0efef !important; }
+[data-theme="calm-teal"] .bg-stone-925\/80,
+[data-theme="calm-teal"] .bg-stone-925\/40,
+[data-theme="calm-teal"] .bg-stone-925 { background-color: #eaf4f4 !important; }
+[data-theme="calm-teal"] .bg-stone-850,
+[data-theme="calm-teal"] .bg-stone-850\/60 { background-color: #e1f0f0 !important; }
+[data-theme="calm-teal"] .bg-stone-800,
+[data-theme="calm-teal"] .bg-stone-800\/80,
+[data-theme="calm-teal"] .bg-stone-800\/90,
+[data-theme="calm-teal"] .bg-stone-800\/50,
+[data-theme="calm-teal"] .bg-stone-800\/40,
+[data-theme="calm-teal"] .bg-stone-800\/30 { background-color: #ffffff !important; }
+[data-theme="calm-teal"] .bg-stone-900\/90 { background-color: rgba(240, 247, 247, 0.96) !important; }
+[data-theme="calm-teal"] .border-stone-800,
+[data-theme="calm-teal"] .border-stone-800\/80,
+[data-theme="calm-teal"] .border-stone-800\/60 { border-color: #c9e2e2 !important; }
+[data-theme="calm-teal"] .border-stone-700,
+[data-theme="calm-teal"] .border-stone-700\/80,
+[data-theme="calm-teal"] .border-stone-700\/60 { border-color: #b4d5d5 !important; }
+[data-theme="calm-teal"] .text-stone-100,
+[data-theme="calm-teal"] .text-stone-200 { color: #132a2a !important; }
+[data-theme="calm-teal"] .text-stone-300 { color: #1f3f3f !important; }
+[data-theme="calm-teal"] .text-stone-400 { color: #3d6868 !important; }
+[data-theme="calm-teal"] .text-stone-500 { color: #6e9494 !important; }
+[data-theme="calm-teal"] textarea,
+[data-theme="calm-teal"] input:not([type="checkbox"]) {
+  background-color: #ffffff !important;
+  color: #132a2a !important;
+  border-color: #b4d5d5 !important;
+}
+[data-theme="calm-teal"] textarea::placeholder,
+[data-theme="calm-teal"] input::placeholder { color: #8faeae !important; }
+[data-theme="calm-teal"] .markdown-body strong { color: #132a2a !important; }
+[data-theme="calm-teal"] .markdown-body h1,
+[data-theme="calm-teal"] .markdown-body h2,
+[data-theme="calm-teal"] .markdown-body h3 { color: #115e59 !important; }
+[data-theme="calm-teal"] .markdown-body code {
+  background-color: #e0efef !important;
+  color: #0f766e !important;
+  border: 1px solid #c9e2e2;
+}
+[data-theme="calm-teal"] .markdown-body blockquote {
+  border-left-color: #0f766e !important;
+  color: #3d6868 !important;
+  background-color: #edf6f6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* =========================================================
+   Misty Sky (Light Blue) Theme Overrides
+   ========================================================= */
+[data-theme="misty-sky"] {
+  background-color: #f1f6fa;
+  color: #172635;
+}
+[data-theme="misty-sky"] .bg-stone-900 { background-color: #f1f6fa !important; }
+[data-theme="misty-sky"] .bg-stone-950 { background-color: #e2ecf5 !important; }
+[data-theme="misty-sky"] .bg-stone-925\/80,
+[data-theme="misty-sky"] .bg-stone-925\/40,
+[data-theme="misty-sky"] .bg-stone-925 { background-color: #ebf2f8 !important; }
+[data-theme="misty-sky"] .bg-stone-850,
+[data-theme="misty-sky"] .bg-stone-850\/60 { background-color: #e3edf7 !important; }
+[data-theme="misty-sky"] .bg-stone-800,
+[data-theme="misty-sky"] .bg-stone-800\/80,
+[data-theme="misty-sky"] .bg-stone-800\/90,
+[data-theme="misty-sky"] .bg-stone-800\/50,
+[data-theme="misty-sky"] .bg-stone-800\/40,
+[data-theme="misty-sky"] .bg-stone-800\/30 { background-color: #ffffff !important; }
+[data-theme="misty-sky"] .bg-stone-900\/90 { background-color: rgba(241, 246, 250, 0.96) !important; }
+[data-theme="misty-sky"] .border-stone-800,
+[data-theme="misty-sky"] .border-stone-800\/80,
+[data-theme="misty-sky"] .border-stone-800\/60 { border-color: #ccdded !important; }
+[data-theme="misty-sky"] .border-stone-700,
+[data-theme="misty-sky"] .border-stone-700\/80,
+[data-theme="misty-sky"] .border-stone-700\/60 { border-color: #b6cde2 !important; }
+[data-theme="misty-sky"] .text-stone-100,
+[data-theme="misty-sky"] .text-stone-200 { color: #172635 !important; }
+[data-theme="misty-sky"] .text-stone-300 { color: #273d52 !important; }
+[data-theme="misty-sky"] .text-stone-400 { color: #486581 !important; }
+[data-theme="misty-sky"] .text-stone-500 { color: #7892a9 !important; }
+[data-theme="misty-sky"] textarea,
+[data-theme="misty-sky"] input:not([type="checkbox"]) {
+  background-color: #ffffff !important;
+  color: #172635 !important;
+  border-color: #b6cde2 !important;
+}
+[data-theme="misty-sky"] textarea::placeholder,
+[data-theme="misty-sky"] input::placeholder { color: #9bb6ce !important; }
+[data-theme="misty-sky"] .markdown-body strong { color: #172635 !important; }
+[data-theme="misty-sky"] .markdown-body h1,
+[data-theme="misty-sky"] .markdown-body h2,
+[data-theme="misty-sky"] .markdown-body h3 { color: #1e40af !important; }
+[data-theme="misty-sky"] .markdown-body code {
+  background-color: #e2ecf5 !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #ccdded;
+}
+[data-theme="misty-sky"] .markdown-body blockquote {
+  border-left-color: #2563eb !important;
+  color: #486581 !important;
+  background-color: #eff5fb;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* =========================================================
+   Sage Meadow (Soft Green) Theme Overrides
+   ========================================================= */
+[data-theme="sage-meadow"] {
+  background-color: #f2f6f3;
+  color: #182b1d;
+}
+[data-theme="sage-meadow"] .bg-stone-900 { background-color: #f2f6f3 !important; }
+[data-theme="sage-meadow"] .bg-stone-950 { background-color: #e2ede4 !important; }
+[data-theme="sage-meadow"] .bg-stone-925\/80,
+[data-theme="sage-meadow"] .bg-stone-925\/40,
+[data-theme="sage-meadow"] .bg-stone-925 { background-color: #ebf3ec !important; }
+[data-theme="sage-meadow"] .bg-stone-850,
+[data-theme="sage-meadow"] .bg-stone-850\/60 { background-color: #e2ede5 !important; }
+[data-theme="sage-meadow"] .bg-stone-800,
+[data-theme="sage-meadow"] .bg-stone-800\/80,
+[data-theme="sage-meadow"] .bg-stone-800\/90,
+[data-theme="sage-meadow"] .bg-stone-800\/50,
+[data-theme="sage-meadow"] .bg-stone-800\/40,
+[data-theme="sage-meadow"] .bg-stone-800\/30 { background-color: #ffffff !important; }
+[data-theme="sage-meadow"] .bg-stone-900\/90 { background-color: rgba(242, 246, 243, 0.96) !important; }
+[data-theme="sage-meadow"] .border-stone-800,
+[data-theme="sage-meadow"] .border-stone-800\/80,
+[data-theme="sage-meadow"] .border-stone-800\/60 { border-color: #cee1d2 !important; }
+[data-theme="sage-meadow"] .border-stone-700,
+[data-theme="sage-meadow"] .border-stone-700\/80,
+[data-theme="sage-meadow"] .border-stone-700\/60 { border-color: #b8d2be !important; }
+[data-theme="sage-meadow"] .text-stone-100,
+[data-theme="sage-meadow"] .text-stone-200 { color: #182b1d !important; }
+[data-theme="sage-meadow"] .text-stone-300 { color: #243e2b !important; }
+[data-theme="sage-meadow"] .text-stone-400 { color: #43664c !important; }
+[data-theme="sage-meadow"] .text-stone-500 { color: #72947a !important; }
+[data-theme="sage-meadow"] textarea,
+[data-theme="sage-meadow"] input:not([type="checkbox"]) {
+  background-color: #ffffff !important;
+  color: #182b1d !important;
+  border-color: #b8d2be !important;
+}
+[data-theme="sage-meadow"] textarea::placeholder,
+[data-theme="sage-meadow"] input::placeholder { color: #9ab9a1 !important; }
+[data-theme="sage-meadow"] .markdown-body strong { color: #182b1d !important; }
+[data-theme="sage-meadow"] .markdown-body h1,
+[data-theme="sage-meadow"] .markdown-body h2,
+[data-theme="sage-meadow"] .markdown-body h3 { color: #166534 !important; }
+[data-theme="sage-meadow"] .markdown-body code {
+  background-color: #e2ede4 !important;
+  color: #15803d !important;
+  border: 1px solid #cee1d2;
+}
+[data-theme="sage-meadow"] .markdown-body blockquote {
+  border-left-color: #15803d !important;
+  color: #43664c !important;
+  background-color: #edf5ef;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* Markdown base styling */
+.markdown-body {
+  color: inherit;
+}
+
+.markdown-body p {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body ul, .markdown-body ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
+.markdown-body li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-body strong {
+  color: #f5f5f4;
+  font-weight: 600;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  color: #fef3c7;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body code {
+  background-color: rgba(41, 37, 36, 0.8);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  color: #fbbf24;
+}
+
+.markdown-body blockquote {
+  border-left: 2px solid #f59e0b;
+  padding-left: 0.75rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  color: #d6d3d1;
+}
+

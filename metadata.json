@@ -1,0 +1,8 @@
+{
+  "name": "Remix Personal Gemini Journal-Ankita Malik",
+  "description": "Enterprise-grade secure AI personal journal and brainstorming partner with multi-turn Gemini interaction, isolated Firestore persistence, and client-side vault encryption.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
